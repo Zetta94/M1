@@ -128,7 +128,7 @@ parseInt("09") --> 9
 2 && 5 --> 5
 5 || 0 --> 5 
 0 || 5 --> 5
-[3]+[3]-[10] --> undefined
+[3]+[3]-[10] --> 23 (Al principio concatena 3 + 3 = 33 y el menos toma los datos, los convierte en int y los resta)
 3>2>1 --> false (3>2 es igual a true, y true no es mayor que 1)
 [] == ![] --> true ya que [] es un objeto(cuyo valor primitivo es igual a "")y ![] es un booleano(cuyo valor primitivo es igual a false) entonces: [] == false, luego [] == 0, luego "" == 0, luego 0 = 0
 
@@ -177,7 +177,7 @@ getFood(false);
 ```
 ## ------------------------------------------------------------------------------------------
 ## Imprime lo siguiente:
-No imprime nada, solo retorna a la nada el valor "Mew Mix", creo que devolveria undefined.
+Retornaria undefined, porque la variable es deficida dentro del if, por lo que js lleva la definicion hacia arriba y la define como undefined, al no ingresar al if porque la condicion es falsa no le asigna el valor de "Friskies".
 ## ------------------------------------------------------------------------------------------
 ### This
 
