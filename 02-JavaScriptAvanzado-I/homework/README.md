@@ -63,11 +63,9 @@ baz = 2;
 ```
 ## ------------------------------------------------------------------------------------------
 ## Imprime lo siguiente:
-null
+undefined (sube la variable bar pero no toma su valor)
 
-2
-
-Hola!
+Al momento de llegar a ver baz esta no está definida por lo que el programa crashea.
 ## ------------------------------------------------------------------------------------------
 
 ```javascript
@@ -77,7 +75,11 @@ if(true) {
 }
 console.log(instructor);
 ```
+## ------------------------------------------------------------------------------------------
+## Imprime lo siguiente:
+Franco
 
+## ------------------------------------------------------------------------------------------
 ```javascript
 var instructor = "Tony";
 console.log(instructor);
@@ -110,6 +112,16 @@ if (true) {
 console.log(instructor);
 console.log(pm);
 ```
+## ------------------------------------------------------------------------------------------
+## Imprime lo siguiente:
+The Flash
+
+Reverse Flash
+
+The Flash (porque fue modificada la variable dentro del if al colocar var)
+
+Franco (Ya que let no sale de su bloque)
+## ------------------------------------------------------------------------------------------
 ### Coerción de Datos
 
 ¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
@@ -117,14 +129,14 @@ console.log(pm);
 ```javascript
 6 / "3"  --> 2
 "2" * "3" --> 6
-4 + 5 + "px" --> 9
-"$" + 4 + 5 --> $45 (los convierte en string)
+4 + 5 + "px" --> 9px (recorre los valores y luego empieza de izquierda  derecha a operar por eso suma 4 y 5 como int)
+"$" + 4 + 5 --> $45 (los convierte en string ya que el primer valor es string)
 "4" - 2 --> 2
-"4px" - 2 --> undefined
-7 / 0 --> 0
-{}[0] --> undefined
+"4px" - 2 --> Nan(No puede restar string con numero)
+7 / 0 --> infinity (js intenta dividir 7 por 0000000000.1 entonces tiende al infinito, tiende a buscar un valor mas chico)
+{}[0] --> [0]
 parseInt("09") --> 9
-5 && 2 --> 2 (Si el lado izq de un and se evalua como falso, toda la ecuacion es falsa, de lo contrario se evalua como lado derecho)
+5 && 2 --> 2 (Si el lado izq de un and se evalua como falso, toda la ecuacion es falsa, de lo contrario devuelve el valor del  lado derecho)
 2 && 5 --> 5
 5 || 0 --> 5 
 0 || 5 --> 5
@@ -156,7 +168,7 @@ test();
 ```
 ## ------------------------------------------------------------------------------------------
 ## Imprime lo siguiente:
-null
+undefined
 
 2
 ## ------------------------------------------------------------------------------------------
@@ -177,7 +189,7 @@ getFood(false);
 ```
 ## ------------------------------------------------------------------------------------------
 ## Imprime lo siguiente:
-Retornaria undefined, porque la variable es deficida dentro del if, por lo que js lleva la definicion hacia arriba y la define como undefined, al no ingresar al if porque la condicion es falsa no le asigna el valor de "Friskies".
+Retornaria undefined, porque la variable es definida dentro del if, por lo que js lleva la definicion hacia arriba y la define como undefined, al no ingresar al if porque la condicion es falsa no le asigna el valor de "Friskies".
 ## ------------------------------------------------------------------------------------------
 ### This
 
