@@ -63,7 +63,15 @@ function cacheFunction(cb) {
   }
   return resultados[arg.toString()];
  }
-
+/*
+var resultados = {};
+ return function(arg){
+  if (!resultados.hasOwnProperty(arg)){
+    resultados[arg] = cb(arg);
+  }
+  return resultados[arg];
+ }
+ */
 }
 
 // Bind
